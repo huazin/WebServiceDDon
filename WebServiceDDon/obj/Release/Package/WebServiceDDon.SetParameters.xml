@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/" />
+  <setParameter name="BancoDDon-Web.config Connection String" value="Data Source=guideforddonweb.ct3ndqwydcc4.us-east-2.rds.amazonaws.com,1433;&#xD;&#xA;         Initial Catalog=guideforddon;&#xD;&#xA;         User ID=huazin;&#xD;&#xA;         Password=cake1992;&#xD;&#xA;         Integrated Security=False;" />
+</parameters>

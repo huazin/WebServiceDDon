@@ -1,0 +1,9 @@
+
+*.config
+.vs/WebServiceDDon/v15/.suo
+*.nupkg
+*.dll
+*.pdb
+*.transform
+*.txt
+*.ps1
