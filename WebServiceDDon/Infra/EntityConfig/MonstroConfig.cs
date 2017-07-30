@@ -12,6 +12,10 @@ namespace WebServiceDDon.Infra.EntityConfig
         public MonstroConfig()
         {
             HasKey(p => p.id_Monstro);
+
+            HasRequired(p => p.Especie)
+               .WithMany()
+               .HasForeignKey(p => p.Id_Especie);
         }
     }
 }

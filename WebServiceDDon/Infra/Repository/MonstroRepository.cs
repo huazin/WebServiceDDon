@@ -24,7 +24,12 @@ namespace WebServiceDDon.Infra.Repository
 
         public Monstro FindById(int id)
         {
-           return Db.Monstro.Find(id);
+            return Db.Monstro.Find(id);
+        }
+
+        public Monstro FindByName(string nome, int idioma)
+        {
+            return Db.Monstro.Where(p => p.apelido == nome && p.idiomaid == idioma).First();
         }
 
         public IEnumerable<Monstro> FindByIdCollection(int id)
@@ -32,14 +37,19 @@ namespace WebServiceDDon.Infra.Repository
             return Db.Monstro.ToList().Where(p => p.id_Monstro == id);
         }
 
-        public IEnumerable<Monstro> List(int idioma)
-        {
-            return Db.Monstro.ToList().Where(p => p.idiomaid == idioma).OrderBy(p => p.especie);
-        }
-
         public IEnumerable<Monstro> List()
         {
-            return List(1);
+            return Db.Monstro.ToList();
+        }
+
+        public IEnumerable<Monstro> List(int categoria, int especie, int idioma)
+        {
+            return Db.Monstro.ToList().Where(p => p.categoria == categoria && p.Id_Especie == especie && p.idiomaid == idioma);
+        }
+
+        public IEnumerable<Monstro> FindByIdList(int id)
+        {
+            return Db.Monstro.ToList().Where(p => p.id_Monstro == id);
         }
 
         public void Remove(Monstro Object)
@@ -50,12 +60,10 @@ namespace WebServiceDDon.Infra.Repository
 
         public IEnumerable<Monstro> GetAllEspecies(int categoria, int idioma)
         {
-            return Db.Monstro.SqlQuery("select * from Monstro where categoria = {0} and idiomaid = {1} group by especie", categoria, idioma);
+            return Db.Monstro.SqlQuery("select especie from Monstro where categoria = {0} and idiomaid = {1} group by especie", categoria, idioma);
         }
 
-         public IEnumerable<Monstro> GetAllForEspecies(int categoria,string especie, int idioma)
-        {
-            return Db.Monstro.ToList().Where(p => p.categoria == categoria && p.especie == especie && p.idiomaid == idioma);
-        }
+
+
     }
 }

@@ -185,22 +185,29 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LabelsIdiomasController.cs" />
     <Compile Include="Controllers\MonstroController.cs" />
+    <Compile Include="Controllers\MonstrosController.cs" />
     <Compile Include="Controllers\MonstrosEspeciesController.cs" />
     <Compile Include="Controllers\SobreController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infra\EntityConfig\EspecieConfig.cs" />
     <Compile Include="Infra\EntityConfig\LabelsIdiomaConfig.cs" />
     <Compile Include="Infra\EntityConfig\MonstroConfig.cs" />
     <Compile Include="Infra\EntityConfig\SobreConfig.cs" />
+    <Compile Include="Infra\EntityConfig\UsuarioConfig.cs" />
+    <Compile Include="Infra\Repository\EspecieRepository.cs" />
     <Compile Include="Infra\Repository\ICrud.cs" />
     <Compile Include="Infra\Repository\LabelsIdiomasRepository.cs" />
     <Compile Include="Infra\Repository\MonstroRepository.cs" />
     <Compile Include="Infra\Repository\SobreRepository.cs" />
+    <Compile Include="Infra\Repository\UsuarioRepository.cs" />
+    <Compile Include="Models\Especie.cs" />
     <Compile Include="Models\LabelsIdiomas.cs" />
     <Compile Include="Models\Monstro.cs" />
     <Compile Include="Models\Sobre.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Infra\Context.cs" />
   </ItemGroup>
@@ -257,6 +264,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Monstros\Index.cshtml" />
+    <Content Include="Views\Monstros\Create.cshtml" />
+    <Content Include="Views\Monstros\Details.cshtml" />
+    <Content Include="Views\Monstros\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

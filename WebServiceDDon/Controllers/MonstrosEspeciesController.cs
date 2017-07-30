@@ -11,21 +11,16 @@ namespace WebServiceDDon.Controllers
 {
     public class MonstrosEspeciesController : ApiController
     {
-        MonstroRepository Db = new MonstroRepository();
+        EspecieRepository Db = new EspecieRepository();
 
-        public IEnumerable<Monstro> Get()
+        public IEnumerable<Especie> Get()
         {
-            return Get(1, 1);
+            return Get(1,1);
         }
 
-        public IEnumerable<Monstro> Get(int categoria, int idioma)
+        public IEnumerable<Especie> Get(int categoria, int idioma)
         {
-            return Db.GetAllEspecies(categoria, idioma);
-        }
-
-        public IEnumerable<Monstro> Get(int categoria, string especie, int idioma)
-        {
-            return Db.GetAllForEspecies(categoria, especie, idioma);
+            return Db.List(categoria, idioma);
         }
     }
 }

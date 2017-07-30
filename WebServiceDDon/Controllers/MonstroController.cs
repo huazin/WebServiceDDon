@@ -16,13 +16,23 @@ namespace WebServiceDDon.Controllers
         // GET: api/Monstro
         public Monstro Get()
         {
-            return Get(1);
+            return null;
         }
 
         // GET: api/Monstro/5
-        public Monstro Get(int id)
+        public IEnumerable<Monstro> Get(int id)
         {
-            return Db.FindById(id);
+            return Db.FindByIdList(id);
+        }
+
+        public Monstro Get(string apelido, int idioma)
+        {
+            return Db.FindByName(apelido, idioma);
+        }
+
+        public IEnumerable<Monstro> Get(int categoria, int id_especie, int idioma)
+        {
+            return Db.List(categoria, id_especie, idioma);
         }
 
 
