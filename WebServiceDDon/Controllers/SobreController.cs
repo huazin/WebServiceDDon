@@ -20,8 +20,7 @@ namespace WebServiceDDon.Controllers
         // GET: api/Sobre/5
         public Sobre Get(int id)
         {
-            SobreRepository Db = new SobreRepository();
-            return Db.FindById(id);
+            return new SobreRepository().FindById(id);
         }
     }
 }

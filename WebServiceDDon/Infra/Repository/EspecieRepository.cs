@@ -36,11 +36,10 @@ namespace WebServiceDDon.Infra.Repository
             return Db.Especies
                 .Join(Db.Monstro,
                 p => p.Id_Especie,
-                p2 => p2.id_Monstro,
+                p2 => p2.Id_Especie,
                 (p, p2) => new { Especie = p, Monstro = p2 })
                 .Where(p => p.Monstro.categoria == categoria && p.Monstro.idiomaid == idioma)
-                .Select(p => p.Especie)
-                .ToList();
+                .Select(p => p.Especie).Distinct();
         }
 
         public void Remove(Especie Object)
