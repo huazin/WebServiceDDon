@@ -22,6 +22,9 @@ namespace WebServiceDDon.Infra
         public DbSet<Monstro> Monstro { get; set; }
         public DbSet<Especie> Especies { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+        public DbSet<Habilidades> Habilidades { get; set; }
+        public DbSet<Passivas> Passivas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -34,6 +37,10 @@ namespace WebServiceDDon.Infra
             modelBuilder.Configurations.Add(new MonstroConfig());
             modelBuilder.Configurations.Add(new EspecieConfig());
             modelBuilder.Configurations.Add(new UsuarioConfig());
+            modelBuilder.Configurations.Add(new JobConfig());
+            modelBuilder.Configurations.Add(new TipoClasseConfiguration());
+            modelBuilder.Configurations.Add(new HabilidadesConfig());
+            modelBuilder.Configurations.Add(new PassivasConfig());
 
             base.OnModelCreating(modelBuilder);
         }

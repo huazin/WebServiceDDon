@@ -1,9 +1,25 @@
 
 *.config
-.vs/WebServiceDDon/v15/.suo
+.vs/WebServiceDDon/v15/*
+.suo
 *.nupkg
 *.dll
 *.pdb
 *.transform
 *.txt
 *.ps1
+*.exe
+*.zip
+*.cmd
+*.xml
+*.cache
+*.targets
+*.rsp
+*.woff
+*.eot
+*.asax
+*.svg
+*.ico
+*.ttf
+*.*.eot
+
