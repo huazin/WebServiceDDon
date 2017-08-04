@@ -11,7 +11,11 @@ namespace WebServiceDDon.Infra.EntityConfig
     {
         public HabilidadesConfig()
         {
-            HasKey(p => p.id_Job);
+            HasKey(p => p.id_Habilidade);
+
+            HasRequired<Job>(p => p.Job)
+                .WithMany()
+                .HasForeignKey(p => p.id_Job);
         }
     }
 }

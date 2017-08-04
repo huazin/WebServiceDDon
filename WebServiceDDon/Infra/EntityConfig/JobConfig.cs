@@ -16,6 +16,8 @@ namespace WebServiceDDon.Infra.EntityConfig
             HasRequired(p => p.TipoClasse)
                .WithMany()
                .HasForeignKey(p => p.Id_Tipo);
+
+
         }
     }
 }

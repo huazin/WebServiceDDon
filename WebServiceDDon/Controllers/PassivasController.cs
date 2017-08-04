@@ -13,9 +13,9 @@ namespace WebServiceDDon.Controllers
     {
         PassivasRepository Db = new PassivasRepository();
         // GET: api/Passivas
-        public IEnumerable<Passivas> Get(int idioma, bool ok)
+        public IEnumerable<Passivas> Get(int idioma,int id_Job)
         {
-            return Db.List(idioma);
+            return Db.List(idioma, id_Job);
         }
 
         // GET: api/Passivas/5

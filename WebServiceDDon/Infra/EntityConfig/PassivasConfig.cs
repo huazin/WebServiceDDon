@@ -12,6 +12,10 @@ namespace WebServiceDDon.Infra.EntityConfig
         public PassivasConfig()
         {
             HasKey(p => p.id_Passiva);
+
+            HasRequired<Job>(p => p.Job)
+                .WithMany()
+                .HasForeignKey(p => p.id_Job);
         }
     }
 }

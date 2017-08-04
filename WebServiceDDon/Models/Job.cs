@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -15,8 +17,7 @@ namespace WebServiceDDon.Models
 
 
         public virtual TipoClasse TipoClasse { get; set; }
-        //public virtual Passivas Passivas { get; set; }
-        //public virtual Habilidades Habilidades { get; set; }
-
+        public virtual IEnumerable<Passivas> Passivas { get; set; }
+        public virtual IEnumerable<Habilidades> Habilidades { get; set; }
     }
 }

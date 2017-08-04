@@ -31,9 +31,9 @@ namespace WebServiceDDon.Infra.Repository
             return Db.Habilidades.ToList();
         }
 
-        public IEnumerable<Habilidades> List(int idioma)
+        public IEnumerable<Habilidades> List(int idioma,int id_job)
         {
-            return Db.Habilidades.ToList().Where(p => p.idiomaId == idioma);
+            return Db.Habilidades.ToList().Where(p => p.idiomaId == idioma && p.id_Job == id_job);
         }
 
         public void Remove(Habilidades Object)

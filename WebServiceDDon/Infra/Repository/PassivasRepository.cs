@@ -31,9 +31,9 @@ namespace WebServiceDDon.Infra.Repository
             return Db.Passivas.ToList();
         }
 
-        public IEnumerable<Passivas> List(int idioma)
+        public IEnumerable<Passivas> List(int idioma, int id_job)
         {
-            return Db.Passivas.ToList().Where(p => p.idiomaId == idioma);
+            return Db.Passivas.ToList().Where(p => p.idiomaId == idioma && p.id_Job == id_job);
         }
 
         public void Remove(Passivas Object)

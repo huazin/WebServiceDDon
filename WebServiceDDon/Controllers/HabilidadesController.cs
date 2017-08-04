@@ -13,9 +13,9 @@ namespace WebServiceDDon.Controllers
     {
         HabilidadesRepository Db = new HabilidadesRepository();
         // GET: api/Habilidades
-        public IEnumerable<Habilidades> Get(int idioma,bool ok)
+        public IEnumerable<Habilidades> Get(int idioma, int id_Job)
         {
-            return Db.List(idioma);
+            return Db.List(idioma,id_Job);
         }
 
         // GET: api/Habilidades/5
