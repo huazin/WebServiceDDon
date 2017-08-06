@@ -183,13 +183,18 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HabilidadesController.cs" />
+    <Compile Include="Controllers\HabilidadesVController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobController.cs" />
+    <Compile Include="Controllers\JobVController.cs" />
     <Compile Include="Controllers\LabelsIdiomasController.cs" />
     <Compile Include="Controllers\MonstroController.cs" />
     <Compile Include="Controllers\MonstrosController.cs" />
     <Compile Include="Controllers\MonstrosEspeciesController.cs" />
+    <Compile Include="Controllers\NovidadesController.cs" />
+    <Compile Include="Controllers\NovidadesVController.cs" />
     <Compile Include="Controllers\PassivasController.cs" />
+    <Compile Include="Controllers\PassivaVController.cs" />
     <Compile Include="Controllers\SobreController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -200,6 +205,7 @@
     <Compile Include="Infra\EntityConfig\JobConfig.cs" />
     <Compile Include="Infra\EntityConfig\LabelsIdiomaConfig.cs" />
     <Compile Include="Infra\EntityConfig\MonstroConfig.cs" />
+    <Compile Include="Infra\EntityConfig\NovidadesConfig.cs" />
     <Compile Include="Infra\EntityConfig\PassivasConfig.cs" />
     <Compile Include="Infra\EntityConfig\SobreConfig.cs" />
     <Compile Include="Infra\EntityConfig\TipoClasseConfiguration.cs" />
@@ -210,6 +216,7 @@
     <Compile Include="Infra\Repository\JobRepository.cs" />
     <Compile Include="Infra\Repository\LabelsIdiomasRepository.cs" />
     <Compile Include="Infra\Repository\MonstroRepository.cs" />
+    <Compile Include="Infra\Repository\NovidadesRepository.cs" />
     <Compile Include="Infra\Repository\PassivasRepository.cs" />
     <Compile Include="Infra\Repository\SobreRepository.cs" />
     <Compile Include="Infra\Repository\UsuarioRepository.cs" />
@@ -218,6 +225,7 @@
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\LabelsIdiomas.cs" />
     <Compile Include="Models\Monstro.cs" />
+    <Compile Include="Models\Novidades.cs" />
     <Compile Include="Models\Passivas.cs" />
     <Compile Include="Models\Sobre.cs" />
     <Compile Include="Models\TipoClasse.cs" />
@@ -282,6 +290,20 @@
     <Content Include="Views\Monstros\Create.cshtml" />
     <Content Include="Views\Monstros\Details.cshtml" />
     <Content Include="Views\Monstros\Edit.cshtml" />
+    <Content Include="Views\JobV\Index.cshtml" />
+    <Content Include="Views\JobV\Create.cshtml" />
+    <Content Include="Views\JobV\Edit.cshtml" />
+    <Content Include="Views\JobV\Details.cshtml" />
+    <Content Include="Views\HabilidadesV\Details.cshtml" />
+    <Content Include="Views\HabilidadesV\Edit.cshtml" />
+    <Content Include="Views\HabilidadesV\Create.cshtml" />
+    <Content Include="Views\PassivaV\Details.cshtml" />
+    <Content Include="Views\PassivaV\Create.cshtml" />
+    <Content Include="Views\PassivaV\Edit.cshtml" />
+    <Content Include="Views\NovidadesV\Index.cshtml" />
+    <Content Include="Views\NovidadesV\Edit.cshtml" />
+    <Content Include="Views\NovidadesV\Details.cshtml" />
+    <Content Include="Views\NovidadesV\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

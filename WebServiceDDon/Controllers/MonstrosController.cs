@@ -14,6 +14,8 @@ namespace WebServiceDDon.Controllers
         // GET: Monstros
         public ActionResult Index()
         {
+            EspecieRepository Repo = new EspecieRepository();
+            TempData["Especie"] = Repo.List().ToList();
             return View(Db.List());
         }
 
